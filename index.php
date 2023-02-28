@@ -12,50 +12,90 @@
     <title>Phone</title>
     <style>
         header {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             display: flex;
             justify-content: space-around;
+        }
+        .searchBar  {
+            width:400px;
+            margin-top: 20px;
         }
         .searchBar ul{
             padding-top: 20px;
             display: flex;
             list-style-type: none;
-            justify-content: space-around;
+            gap: 10px;
+        }
+        .searchBar input {
+            width: 300px;
+            height: 40px;
+        }
+        .searchBar button {
+            width: 100px;
+            height: 41px;
         }
         .logo img {
+            padding-left: 0;
             width:250px;
-            height: 150px;
+            height: 100px;
+        }
+
+        .user {
+            width:200px;
+            padding-top: 20px;
+        }
+        .user button {
+            width: 40px;
+            height:40px;
+            border-radius: 50%;        }
+        .user span {
+            margin-left: 10px;
         }
         .card-group{
             grid: 25% 25% 25% 25%;
             display: flex;
-            gap: 10px;
+            gap: 20px;
+            margin: 10px;
     
         }
         .card{
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
             width: 250px;
-            height: 500px;
+            height: 450px;
         }
         #phone_img img {
             width: 210px;
-            height: 260px;
+            height: 240px;
         }
         .star {
-            color: yellow;
+            color: orange;
         }
         .title{
             margin-top: 20px;
             margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
             text-align: center;
             color:#ffff;
             font-size: 34px;
-            background-color:cornflowerblue;
+            background-color:red;
             border-radius: 50px;
+        }
+        #phone_name {
+            font-weight: bold;
+
         }
         #phone_price{
             color: red;
         }
-        #plus_button{
-        border-radius: 100px;
+        #plus_button {
+            color:grey;
+        }
+        #plus_button button{
+            float:right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -69,12 +109,12 @@
             'name' => 'Oppo Reno8',
             'price' => '1.700.000đ',
             'feedback' => array(
-                                'quatity_star' => 4,
+                                'quatity_star' => 2,
                                 'quatity_feedback' => "9999 đánh giá", ),
             ),
         array(
             'img' => 'https://cdn.tgdd.vn/Products/Images/42/240259/iPhone-14-thumb-do-600x600.jpg',
-            'name' => 'Oppo Reno8',
+            'name' => 'iPhone 14 ',
             'price' => '4.700.000đ',
             'feedback' => array(
                                 'quatity_star' => 4,
@@ -82,19 +122,19 @@
             ),
         array(
             'img' => 'https://cdn.tgdd.vn/Products/Images/42/249945/oppo-a16k-thumb1-600x600-1-600x600.jpg',
-            'name' => 'Oppo Reno8',
+            'name' => 'Oppo A16K',
             'price' => '8.700.000đ',
             'feedback' => array(
-                                'quatity_star' => 4,
+                                'quatity_star' => 5,
                                 'quatity_feedback' => "9999 đánh giá", ),
         ),
       
         array(
             'img' => 'https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg',
-            'name' => 'Oppo Reno8',
+            'name' => 'iPhone 14 Pro Max',
             'price' => '2.700.000đ',
             'feedback' => array(
-                                'quatity_star' => 4,
+                                'quatity_star' => 3,
                                 'quatity_feedback' => "9999 đánh giá", ),
              ),
   
@@ -104,7 +144,7 @@
     'Sản phẩm mới nhất' => array(
         array(
             'img' => 'https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg',
-            'name' => 'Oppo Reno8',
+            'name' => 'iPhone 14 Pro Max',
             'price' => '1.700.000đ',
             'feedback' => array(
                                 'quatity_star' => 4,
@@ -112,10 +152,10 @@
            ),
         array(
             'img' => 'https://cdn.tgdd.vn/Products/Images/42/249945/oppo-a16k-thumb1-600x600-1-600x600.jpg',
-            'name' => 'Oppo Reno8',
+            'name' => 'Oppo A16K',
             'price' => '6.300.000đ',
             'feedback' => array(
-                                'quatity_star' => 4,
+                                'quatity_star' => 5,
                                 'quatity_feedback' => "9999 đánh giá", ),
             ),
         array(
@@ -131,15 +171,16 @@
             'name' => 'Oppo Reno8',
             'price' => '1.900.000đ',
             'feedback' => array(
-                                'quatity_star' => 4,
+                                'quatity_star' => 3,
                                 'quatity_feedback' => "9999 đánh giá", ),
             ),
         
         ));
+    
 ?>
 <header>
     <div class="logo">
-        <img src="https://img.freepik.com/premium-vector/smart-phone-store-logo-vector_8169-118.jpg" alt="logo">
+        <img src="https://www.freepnglogos.com/uploads/mobile-marketing-logo-png-12.png" alt="logo">
     </div>
     <div class="searchBar">
         <div>
@@ -148,7 +189,7 @@
         <div>
             <ul>
                 Từ khoá: 
-                <li>Samsung  </li>
+                <li>Samsung</li>
                 <li>iPhone  </li>
                 <li>Huawei  </li>
                 <li>Oppo  </li>
@@ -156,13 +197,14 @@
             </ul>
         </div>
     </div>
-    <div>
+    <div class="user">
         <button type=""><i class="fa-solid fa-user"></i></button><span>Tài khoản</span>
     </div>
 </header>
 <div id="content">
     <?php 
-    foreach ($list_phones as $key => $value) { ?>
+    foreach ($list_phones as $key => $value) { 
+        asort($value); ?>
         <div class="title"> 
             <?php echo $key ?>
     </div>
